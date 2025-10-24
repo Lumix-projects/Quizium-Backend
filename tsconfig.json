@@ -1,12 +1,29 @@
 {
   "compilerOptions": {
+    /* 📦 بيخلي الكود الناتج حديث ويدعم async/await */
     "target": "ES2020",
-    "module": "commonjs",
+
+    /* 📁 هيخلي TypeScript يولد JavaScript بـ ESNext module system (ضروري لـ import/export) */
+    "module": "ESNext",
+
+    /* 📂 مكان ملفات TypeScript */
     "rootDir": "src",
+
+    /* 📂 مكان الإخراج بعد الـ build */
     "outDir": "dist",
+
+    /* ⚙️ إعدادات الأمان والدقة */
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+
+    /* 🧩 مهم عشان يلاقي الـ modules زي ما Node.js بيعمل */
+    "moduleResolution": "node",
+
+    /* ✨ يحافظ على بنية المجلدات */
+    "preserveConstEnums": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
